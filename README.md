@@ -1,7 +1,5 @@
 # GG-Bond — 刘昶 个人主页
 
-浅色、圆角、blurple 风格的个人主页，设计系统取自 [Refero 上的 Discord (discord.com)](https://styles.refero.design/style/faec4b0c-cf93-4150-97de-0a8e7eed1840) 模板（浅色模式）。
-
 ## 预览
 
 纯静态页面，无需构建工具。直接双击 `index.html` 即可，或用任意静态服务器：
