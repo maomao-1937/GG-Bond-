@@ -1,51 +1,57 @@
-# GG-Bond — 刘昶 个人主页
+<div align="center">
 
-## 预览
+# 刘昶 · Chang Liu
 
-纯静态页面，无需构建工具。直接双击 `index.html` 即可，或用任意静态服务器：
+### AI Product Manager
 
-```bash
-python3 -m http.server 8000
-# 然后打开 http://localhost:8000
+**🔗 在线访问：https://maomao-1937.github.io/GG-Bond-/**
+
+[![GitHub Pages](https://img.shields.io/badge/GitHub%20Pages-在线-brightgreen)](https://maomao-1937.github.io/GG-Bond-/)
+
+</div>
+
+---
+
+## 📖 简介
+
+这是我的个人主页，一个纯静态、无需构建工具的网站。深色与浅色结合的卡片式设计，blurple 紫色调，包含：
+
+- **关于我** —— 个人定位与产品理念
+- **精选项目** —— 爱支招、ExplainBack
+- **文章与思考** —— 公众号、人人都是产品经理的文章入口
+- **联系** —— 邮箱
+
+## 🚀 在线预览
+
+访问 👉 **https://maomao-1937.github.io/GG-Bond-/** （GitHub Pages 托管，全球可访问）
+
+## 📂 文件结构
+
+```
+├── index.html    # 页面结构 + 个性配置（window.SITE）
+├── styles.css    # 设计系统（CSS 变量）
+├── script.js     # 内容渲染 + 交互
+└── README.md
 ```
 
-## 个性化内容
+## ✏️ 如何修改内容
 
-所有内容集中在一处：`index.html` 顶部的 `window.SITE` 对象。
+所有个人信息集中在 `index.html` 顶部的 `window.SITE` 中：
 
 ```js
 window.SITE = {
-  name: "刘昶", nameEn: "Chang Liu",
+  name: "刘昶",
+  nameEn: "Chang Liu",
   title: "AI Product Manager",
   email: "lc15716951535@gmail.com",
-  socials: [ /* { label, url } */ ],
-  projects: [ /* { title, tag, description, stack } */ ],
-  whatIDo: [ /* { title, desc } */ ],
-  platforms: [ /* { name, short, desc, qr? 或 url } */ ],   // 公众号 / 人人都是产品经理
-  articles: [ /* { title, platform, url, date } */ ]        // 文章列表
+  projects: [...],   // 精选项目
+  platforms: [...],  // 公众号 / 人人都是产品经理
+  articles: [...]    // 文章列表
 };
 ```
 
-改完刷新即可。
+改完提交推送即可，GitHub Pages 约 1 分钟内自动更新。
 
-## 页面结构
+## 📄 License
 
-- 导航 / Hero（名字 + AI Product Manager）
-- 关于我（About Me）
-- 精选项目（Featured Projects）：爱支招、ExplainBack
-- 我在做什么（What I Do）：Product / AI Product / Evaluation / Build & Ship
-- 文章与思考（Writings）：公众号 + 人人都是产品经理 + 文章列表
-- 联系（Contact）
-
-## 待替换的占位内容
-
-1. **公众号二维码**：`platforms` 里的 `qr: ""`，把二维码图片路径填进去即可（如 `qr: "qrcode.png"`）
-2. **公众号链接**：`socials` 里的 `公众号 url: "#"`
-3. **文章**：`articles` 里的标题、链接、日期都是示例
-
-## 设计要点（源自 Discord 模板 · 浅色模式）
-
-- **配色**：淡紫灰 `#f2f3f7` + blurple `#5865f2` + 近黑文字 `#1e1f22`
-- **字体**：Nunito（粗圆标题，替代 Ginto Nord）+ Inter（正文，替代 gg sans）
-- **动效**：极光 blob 漂移、标题渐入、名字渐变流光、顶部滚动进度条、卡片 hover、滚动出现
-- **圆角**：12/16/20px 卡片 + 药丸按钮
+个人主页，保留所有权利。
