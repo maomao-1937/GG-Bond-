@@ -84,20 +84,6 @@
     }).join("");
   }
 
-  /* ---------- 渲染文章列表 ---------- */
-  function renderArticles() {
-    const wrap = $("#articlesList");
-    if (!wrap) return;
-    wrap.innerHTML = (S.articles || []).map((a) => `
-      <a class="article reveal" href="${a.url || "#"}" target="_blank" rel="noopener noreferrer">
-        <span class="article__platform">${a.platform || "文章"}</span>
-        <span class="article__title">${a.title || ""}</span>
-        <span class="article__date">${a.date || ""}</span>
-        <span class="article__arrow">→</span>
-      </a>
-    `).join("");
-  }
-
   /* ---------- 渲染社交链接 ---------- */
   function renderSocials() {
     const wrap = $("[data-socials]");
@@ -191,7 +177,6 @@
     renderProjects();
     renderWhatIDo();
     renderPlatforms();
-    renderArticles();
     renderSocials();
     initScrollProgress();
     initNav();
