@@ -4,9 +4,9 @@
 
 ### AI Product Manager
 
-**🔗 在线访问：https://maomao-1937.github.io/GG-Bond-/**
+**🔗 在线访问：https://maomao-1937.github.io/Personal-Information/**
 
-[![GitHub Pages](https://img.shields.io/badge/GitHub%20Pages-在线-brightgreen)](https://maomao-1937.github.io/GG-Bond-/)
+[![GitHub Pages](https://img.shields.io/badge/GitHub%20Pages-在线-brightgreen)](https://maomao-1937.github.io/Personal-Information/)
 
 </div>
 
@@ -23,7 +23,7 @@
 
 ## 🚀 在线预览
 
-访问 👉 **https://maomao-1937.github.io/GG-Bond-/** （GitHub Pages 托管，全球可访问）
+访问 👉 **https://maomao-1937.github.io/Personal-Information/** （GitHub Pages 托管，全球可访问）
 
 ## 📂 文件结构
 
