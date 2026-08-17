@@ -318,6 +318,17 @@ ul { list-style: none; }
   animation: rise 0.8s var(--ease) 0.3s both;
 }
 .hero__subtitle strong { color: var(--text); font-weight: 600; }
+.hero__subtitle .hero__role {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 1.55em;
+  background: var(--grad);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  white-space: nowrap;
+  vertical-align: -0.06em;
+}
 
 .hero__actions {
   display: flex;
