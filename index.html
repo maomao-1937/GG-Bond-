@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>刘昶 — AI Product Manager</title>
+  <meta name="description" content="刘昶（Chang Liu）的个人主页 — AI 产品经理。" />
+
+  <!-- ============================================================
+       个性配置区：改这里即可换内容
+       ============================================================ -->
+  <script>
+    window.SITE = {
+      name: "刘昶",                 // 中文名（导航 / 页脚）
+      nameEn: "Chang Liu",         // 英文名
+      title: "AI Product Manager", // 头衔
+      email: "lc15716951535@gmail.com",
+
+      // 社交链接（按需增删）
+      socials: [
+        { label: "邮箱", url: "mailto:lc15716951535@gmail.com" },
+        { label: "公众号", url: "#" },
+        { label: "人人都是产品经理", url: "https://www.woshipm.com/" }
+      ],
+
+      // 精选项目
+      projects: [
+        {
+          title: "爱支招",
+          tag: "AI 应用",
+          description: "为年轻人打造的情感问题分析平台",
+          stack: ["LLM", "Product Design", "RAG"]
+        },
+        {
+          title: "ExplainBack",
+          tag: "AI 工具",
+          description: "面向用户的 AI 建议与决策辅助产品，把复杂问题拆解成可执行的方案。",
+          stack: ["Explainability", "Evals", "LLM"]
+        }
+      ],
+
+      // 我在做什么
+      whatIDo: [
+        { title: "Product",       desc: "从 0 到 1 定义产品、拆解需求，把模糊的想法收敛成清晰的产品路径。" },
+        { title: "AI Product",    desc: "把模型能力转译成可用的产品体验，在技术边界与用户价值之间找平衡。" },
+        { title: "Evaluation",    desc: "为 AI 产品建立可量化、可复现的评测体系，让「好」不再是玄学。" },
+        { title: "Build & Ship",  desc: "借助工具快速搭建原型并上线验证，用真实反馈驱动迭代。" }
+      ],
+
+      // 平台入口（公众号 + 人人都是产品经理）
+      platforms: [
+        { name: "公众号", icon: "wechat", desc: "AI 产品观察与思考，扫码或搜索关注", qr: "" },
+        { name: "人人都是产品经理", icon: "article", desc: "我的专栏主页，产品观点都在这里", url: "https://www.woshipm.com/" }
+      ],
+
+      // 文章列表（替换成你的真实文章标题与链接）
+      articles: [
+        { title: "示例：替换成你的文章标题", platform: "公众号", url: "#", date: "2025-06" },
+        { title: "示例：替换成你的文章标题", platform: "人人都是产品经理", url: "https://www.woshipm.com/", date: "2025-05" },
+        { title: "示例：替换成你的文章标题", platform: "公众号", url: "#", date: "2025-04" }
+      ]
+    };
+  </script>
+
+  <link rel="preconnect" href="https://fonts.loli.net" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.loli.net/css2?family=Nunito:wght@700;800;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='26' fill='%235865f2'/%3E%3Ctext x='50' y='70' font-size='52' font-family='Arial' font-weight='bold' fill='white' text-anchor='middle'%3E%E5%88%98%3C/text%3E%3C/svg%3E" />
+</head>
+<body>
+  <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+
+  <!-- ======================= 导航 ======================= -->
+  <header class="nav" id="nav">
+    <div class="container nav__inner">
+      <a href="#top" class="nav__logo" data-name>刘昶</a>
+      <nav class="nav__links" id="navLinks" aria-label="主导航">
+        <a href="#about" class="nav__link">关于</a>
+        <a href="#projects" class="nav__link">项目</a>
+        <a href="#writings" class="nav__link">文章</a>
+        <a href="#contact" class="nav__link">联系</a>
+      </nav>
+      <div class="nav__actions">
+        <a href="#contact" class="btn btn--primary btn--sm">联系我</a>
+        <button class="nav__toggle" id="navToggle" aria-label="打开菜单" aria-expanded="false">
+          <span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="top">
+    <!-- ======================= Hero ======================= -->
+    <section class="hero">
+      <div class="hero__blob hero__blob--1" aria-hidden="true"></div>
+      <div class="hero__blob hero__blob--2" aria-hidden="true"></div>
+      <div class="container hero__inner">
+        <span class="hero__eyebrow" data-title>AI Product Manager</span>
+
+        <h1 class="hero__title">
+          <span class="line">你好，我是<span class="hero__name" data-name>刘昶</span></span>
+        </h1>
+
+        <p class="hero__en" data-nameen>Chang Liu</p>
+
+        <p class="hero__subtitle">
+          一名 <strong>AI 产品经理</strong>。相信好的 AI 产品，既要懂技术，也要懂人 ——
+          把模型能力变成真正被需要的体验，把模糊的想法变成可上线的产品。
+        </p>
+
+        <div class="hero__actions">
+          <a href="#projects" class="btn btn--primary btn--lg">查看项目 <span class="arrow">→</span></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================= 关于我 ======================= -->
+    <section class="section" id="about">
+      <div class="container">
+        <header class="section__head">
+          <p class="section__kicker">About Me</p>
+          <h2 class="section__title">关于<span class="accent">我</span></h2>
+        </header>
+
+        <div class="about__grid">
+          <p class="about__lead">
+            我是<strong>刘昶</strong>，一名 AI 产品经理。比起追逐热点，
+            我更关心一个朴素的问题 —— 这项技术，到底能帮用户把什么事情做得更好。
+          </p>
+          <p class="about__text">
+            我持续跟踪 AI 产品的演进 —— 从基础模型到 Agent，从评测方法到交付工具。
+            我相信产品的价值不在于堆了多少能力，而在于它是否被真正用起来、并且用得好。
+          </p>
+        </div>
+
+        <h3 class="sub-label">我专注的方向</h3>
+        <div class="do-grid" id="whatIDo"><!-- JS 渲染 --></div>
+      </div>
+    </section>
+
+    <!-- ======================= 精选项目 ======================= -->
+    <section class="section section--alt" id="projects">
+      <div class="container">
+        <header class="section__head">
+          <p class="section__kicker">Featured Projects</p>
+          <h2 class="section__title">精选<span class="accent">项目</span></h2>
+        </header>
+        <div class="grid" id="projectsList"><!-- JS 渲染 --></div>
+      </div>
+    </section>
+
+    <!-- ======================= 文章与思考 ======================= -->
+    <section class="section section--alt" id="writings">
+      <div class="container">
+        <header class="section__head">
+          <p class="section__kicker">Writings</p>
+          <h2 class="section__title">文章<span class="accent">与思考</span></h2>
+        </header>
+
+        <div class="platforms" id="platformsList"><!-- JS 渲染 --></div>
+
+        <h3 class="articles__label">最新文章</h3>
+        <div class="articles" id="articlesList"><!-- JS 渲染 --></div>
+      </div>
+    </section>
+
+    <!-- ======================= 联系 ======================= -->
+    <section class="section section--contact" id="contact">
+      <div class="contact__blob" aria-hidden="true"></div>
+      <div class="container contact">
+        <p class="section__kicker contact__kicker">Contact</p>
+        <h2 class="contact__title">一起聊聊<span class="accent">AI</span></h2>
+        <p class="contact__text">
+          无论是合作、交流，还是单纯对 AI 产品有想法，都很欢迎。
+        </p>
+        <a class="btn btn--primary btn--lg" data-mail href="mailto:lc15716951535@gmail.com">
+          <span data-email>lc15716951535@gmail.com</span> <span class="arrow">→</span>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <!-- ======================= 页脚 ======================= -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <span class="footer__name" data-name>刘昶</span>
+      <span class="footer__copy">© <span data-year>2026</span> — <span data-title>AI Product Manager</span></span>
+      <nav class="footer__socials" data-socials aria-label="社交链接"></nav>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,162 +1,53 @@
+# GG-Bond — 刘昶 个人主页
 
-<div align="right">
-  <details>
-    <summary >🌐 Language</summary>
-    <div>
-      <div align="center">
-        <a href="https://openaitx.github.io/view.html?user=Uaghazade1&project=kanba&lang=en">English</a>
-        | <a href="https://openaitx.github.io/view.html?user=Uaghazade1&project=kanba&lang=zh-CN">简体中文</a>
-        | <a href="https://openaitx.github.io/view.html?user=Uaghazade1&project=kanba&lang=zh-TW">繁體中文</a>
-        | <a href="https://openaitx.github.io/view.html?user=Uaghazade1&project=kanba&lang=ja">日本語</a>
-        | <a href="https://openaitx.github.io/view.html?user=Uaghazade1&project=kanba&lang=ko">한국어</a>
-        | <a href="https://openaitx.github.io/view.html?user=Uaghazade1&project=kanba&lang=hi">हिन्दी</a>
-        | <a href="https://openaitx.github.io/view.html?user=Uaghazade1&project=kanba&lang=th">ไทย</a>
-        | <a href="https://openaitx.github.io/view.html?user=Uaghazade1&project=kanba&lang=fr">Français</a>
-        | <a href="https://openaitx.github.io/view.html?user=Uaghazade1&project=kanba&lang=de">Deutsch</a>
-        | <a href="https://openaitx.github.io/view.html?user=Uaghazade1&project=kanba&lang=es">Español</a>
-        | <a href="https://openaitx.github.io/view.html?user=Uaghazade1&project=kanba&lang=it">Itapano</a>
-        | <a href="https://openaitx.github.io/view.html?user=Uaghazade1&project=kanba&lang=ru">Русский</a>
-        | <a href="https://openaitx.github.io/view.html?user=Uaghazade1&project=kanba&lang=pt">Português</a>
-        | <a href="https://openaitx.github.io/view.html?user=Uaghazade1&project=kanba&lang=nl">Nederlands</a>
-        | <a href="https://openaitx.github.io/view.html?user=Uaghazade1&project=kanba&lang=pl">Polski</a>
-        | <a href="https://openaitx.github.io/view.html?user=Uaghazade1&project=kanba&lang=ar">العربية</a>
-        | <a href="https://openaitx.github.io/view.html?user=Uaghazade1&project=kanba&lang=fa">فارسی</a>
-        | <a href="https://openaitx.github.io/view.html?user=Uaghazade1&project=kanba&lang=tr">Türkçe</a>
-        | <a href="https://openaitx.github.io/view.html?user=Uaghazade1&project=kanba&lang=vi">Tiếng Việt</a>
-        | <a href="https://openaitx.github.io/view.html?user=Uaghazade1&project=kanba&lang=id">Bahasa Indonesia</a>
-      </div>
-    </div>
-  </details>
-</div>
+浅色、圆角、blurple 风格的个人主页，设计系统取自 [Refero 上的 Discord (discord.com)](https://styles.refero.design/style/faec4b0c-cf93-4150-97de-0a8e7eed1840) 模板（浅色模式）。
 
-<div align="center">
-  <br />
-<br />
-<a href="https://kanba.co">
-  <img alt="Kanba" src="https://www.kanba.co/dark-hero.png" style=" width: 800px " />
-</a>
-    <br />
-<br />
-</div>
+## 预览
 
-<div align="center">
-  <br />
-<br />
-<a href="https://vercel.com/oss">
-  <img alt="Vercel OSS Program" src="https://vercel.com/oss/program-badge.svg" />
-</a>
-    <br />
-<br />
-</div>
-# Open-source, lightweight Trello alternative designed for makers and indie hackers.
-
-Focus on simplicity, speed, and scalability.
-Built with modern stack: Tailwind CSS, shadcn/ui, Supabase, Stripe integration.
-Supports unlimited projects, team collaboration, dark/light mode, and seamless user experience.
-Perfect for solo devs and small teams who want full control without unnecessary complexity.
-
-## 🌟 If you find this project useful, consider giving it a star! It helps others discover it too.
-
-# Deployment Guide
-
-## Overview
-This application now uses local Next.js API routes instead of Supabase Edge Functions for Stripe integration. This makes deployment simpler and allows you to use standard .env files for configuration.
-
-## Environment Variables Setup
-
-### 1. Create .env.local file
-Copy `.env.example` to `.env.local` and fill in your actual values:
+纯静态页面，无需构建工具。直接双击 `index.html` 即可，或用任意静态服务器：
 
 ```bash
-cp .env.example .env.local
+python3 -m http.server 8000
+# 然后打开 http://localhost:8000
 ```
 
-### 2. Required Environment Variables
+## 个性化内容
 
-#### Supabase Configuration
-- `NEXT_PUBLIC_SUPABASE_URL` - Your Supabase project URL
-- `NEXT_PUBLIC_SUPABASE_ANON_KEY` - Your Supabase anonymous key
-- `SUPABASE_SERVICE_ROLE_KEY` - Your Supabase service role key (server-side only)
+所有内容集中在一处：`index.html` 顶部的 `window.SITE` 对象。
 
-#### Stripe Configuration (optional)
-- `STRIPE_SECRET_KEY` - Your Stripe secret key (server-side only)
-- `NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY` - Your Stripe publishable key
-- `STRIPE_WEBHOOK_SECRET` - Your Stripe webhook secret
-
-#### Site Configuration
-- `NEXT_PUBLIC_SITE_URL` - Your site URL (for production)
-- `NEXTAUTH_URL` - Your site URL (same as above)
-- `NEXTAUTH_SECRET` - A random secret for NextAuth
-
-## Local Development
-
-1. Install dependencies:
-```bash
-npm install
+```js
+window.SITE = {
+  name: "刘昶", nameEn: "Chang Liu",
+  title: "AI Product Manager",
+  email: "lc15716951535@gmail.com",
+  socials: [ /* { label, url } */ ],
+  projects: [ /* { title, tag, description, stack } */ ],
+  whatIDo: [ /* { title, desc } */ ],
+  platforms: [ /* { name, short, desc, qr? 或 url } */ ],   // 公众号 / 人人都是产品经理
+  articles: [ /* { title, platform, url, date } */ ]        // 文章列表
+};
 ```
 
-2. Set up your environment variables in `.env.local`
+改完刷新即可。
 
-3. Run the development server:
-```bash
-npm run dev
-```
+## 页面结构
 
-4. Test Stripe webhooks locally using Stripe CLI:
-```bash
-stripe listen --forward-to localhost:3000/api/stripe/webhook
-```
+- 导航 / Hero（名字 + AI Product Manager）
+- 关于我（About Me）
+- 精选项目（Featured Projects）：爱支招、ExplainBack
+- 我在做什么（What I Do）：Product / AI Product / Evaluation / Build & Ship
+- 文章与思考（Writings）：公众号 + 人人都是产品经理 + 文章列表
+- 联系（Contact）
 
-## Production Deployment
+## 待替换的占位内容
 
+1. **公众号二维码**：`platforms` 里的 `qr: ""`，把二维码图片路径填进去即可（如 `qr: "qrcode.png"`）
+2. **公众号链接**：`socials` 里的 `公众号 url: "#"`
+3. **文章**：`articles` 里的标题、链接、日期都是示例
 
-### Vercel Deployment
+## 设计要点（源自 Discord 模板 · 浅色模式）
 
-1. **Deploy to Vercel:**
-```bash
-npx vercel
-```
-
-2. **Environment Variables:**
-   Add all environment variables through Vercel dashboard or CLI
-
-3. **Stripe Webhook Setup:**
-   - Point webhook to: `https://your-domain.vercel.app/api/stripe/webhook`
-
-## API Endpoints
-
-The application now uses these local API routes:
-
-- `POST /api/stripe/checkout` - Creates Stripe checkout sessions
-- `POST /api/stripe/webhook` - Handles Stripe webhook events
-
-## Benefits of Local API Routes
-
-1. **Simpler Deployment** - No need to deploy separate edge functions
-2. **Environment Variables** - Standard .env file support
-3. **Better Debugging** - Easier to debug locally
-4. **Framework Integration** - Better integration with Next.js
-5. **No Vendor Lock-in** - Can deploy to any platform that supports Next.js
-
-## Troubleshooting
-
-1. **Webhook Issues:**
-   - Ensure `STRIPE_WEBHOOK_SECRET` matches your Stripe webhook endpoint
-   - Check webhook logs in Stripe dashboard
-   - Verify webhook URL is correct
-
-2. **Environment Variables:**
-   - Ensure all required variables are set
-   - Check for typos in variable names
-   - Verify Supabase service role key has proper permissions
-
-3. **CORS Issues:**
-   - API routes include proper CORS headers
-   - Ensure your domain is whitelisted if needed
-
-## Security Notes
-
-- Never expose `STRIPE_SECRET_KEY` or `SUPABASE_SERVICE_ROLE_KEY` to the client
-- Use `NEXT_PUBLIC_` prefix only for client-side variables
-- Regularly rotate your webhook secrets
-- Monitor webhook delivery in Stripe dashboard
+- **配色**：淡紫灰 `#f2f3f7` + blurple `#5865f2` + 近黑文字 `#1e1f22`
+- **字体**：Nunito（粗圆标题，替代 Ginto Nord）+ Inter（正文，替代 gg sans）
+- **动效**：极光 blob 漂移、标题渐入、名字渐变流光、顶部滚动进度条、卡片 hover、滚动出现
+- **圆角**：12/16/20px 卡片 + 药丸按钮
